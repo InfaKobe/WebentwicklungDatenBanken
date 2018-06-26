@@ -9,12 +9,12 @@
       <img src="/lang-logo.png">
     </a>
     <h1>Hammudi rrrrrrrrrrrrTest Seite on Horuko</h1>
-    <p>Seit über einem Jahr bieten wir Ihnen
-				kompetente und zuverlässige Beratung bei allen Fragen rund um den
+    <p>Seit ueber einem Jahr bieten wir Ihnen
+				kompetente und zuverlaessige Beratung bei allen Fragen rund um den
 				Pizzen</p>
 				
-       <a type="button" class="btn btn-lg btn-default" href="/."><span class="glyphicon glyphicon-flash"></span> Index.html </a>
-    <a type="button" class="btn btn-lg btn-primary" href="/test.html"><span class="glyphicon glyphicon-download"></span> test.html frfr</a>
+       <a type="button" class="btn btn-lg btn-default" href="/."><span class="glyphicon glyphicon-flash"></span> Home </a>
+    <a type="button" class="btn btn-lg btn-primary" href="/test.html"><span class="glyphicon glyphicon-download"></span> Pizzen</a>
   </div>
 </div>
 <div class="container">
@@ -22,9 +22,14 @@
    Die besten lokalen Angebote
 Welches besondere Angebot gibt es bei deinem Domino's? Finde es heraus! <a href="https://devcenter.heroku.com/articles/getting-started-with-java" class="alert-link">Getting Started with Java on Heroku</a> tutorial.
   </div>
+  
+  
+  
+  
   <hr>
   <div class="row">
     <div class="col-md-6">
+    
       <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
       <ul>
         <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/java-getting-started">Heroku Button</a> on the repository.</li>
@@ -33,10 +38,132 @@ Welches besondere Angebot gibt es bei deinem Domino's? Finde es heraus! <a href=
         <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
         <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
       </ul>
+      
+      
+      
+      <!-- ================================================================== -->
+
+<h:messages globalOnly="false" showDetail="true" showSummary="true"
+infoClass="msgInfo" warnClass="msgWarning"
+errorClass="msgError" fatalClass="msgFatal"/>
+
+<f:event type="preRenderView" listener="#{mbBrowse.preRenderAction }"/>
+<f:event type="postRenderView" listener="#{mbBrowse.postRenderAction}"/>
+
+
+
+<h3>Bitte registrieren Sie sich! </h3>
+
+<table>
+<tbody>
+<h:panelGroup>
+
+
+<p/><p/>
+<tr>
+<td> KundenID &#160;</td>
+<td>
+<h:inputText id="kundenId" label="kundenId" maxlength="10"
+value="#{mbBrowse.kundenId}"/> &#160;&#160;
+</td>
+</tr>
+
+<tr>
+<td> Vorname &#160; </td>
+<td>
+<h:inputText label="vorname" maxlength="10"
+value="#{mbBrowse.vorname}"/> &#160;&#160;
+</td>
+</tr>
+
+<tr>
+<td> Nachname &#160; </td>
+<td>
+<h:inputText label="nachname" value="#{mbBrowse.nachname}"
+maxlength="45"/> &#160;&#160;
+</td>
+</tr>
+
+<tr>
+
+
+<td> Adresse &#160; </td>
+<td>
+<h:inputText label="adresse" value="#{mbBrowse.adresse}"
+maxlength="45"/> &#160;&#160;
+</td>
+</tr>
+
+<tr>
+
+<td> Postleitzahl &#160; </td>
+<td>
+<h:inputText label="postleitzahl" value="#{mbBrowse.postleitzahl}"
+maxlength="45"/> &#160;&#160;
+</td>
+</tr>
+
+<tr>
+<td>Telefonnummer &#160;</td>
+<td>
+<h:inputText id="telefonnumer" label="telefonnummer" maxlength="10"
+value="#{mbBrowse.telefonnummer}"> &#160;&#160;
+</h:inputText>
+</td>
+</tr>
+</h:panelGroup>
+</tbody>
+</table>
+
+<p/>
+
+<p/><p/><h:panelGroup>
+<h:commandButton value="&lt;&lt;" disabled="#{mbBrowse.prevButtonDisabled}"
+title="Zurück blättern" style="font-size: 130%;"
+actionListener="#{mbBrowse.prev}"/> &#160;&#160;
+
+<h:commandButton value="&gt;&gt;" disabled="#{mbBrowse.nextButtonDisabled}"
+title="Vorwärts blättern" style="font-size: 130%;"
+actionListener="#{mbBrowse.next}"/> &#160;&#160;
+
+<h:commandButton value="Insert" disabled="#{ ! mbBrowse.connected}"
+title="Datensatz einfügen"
+style="font-size: 130%;"
+actionListener="#{mbBrowse.insert}"/> &#160;&#160;
+
+<h:commandButton value="Update" disabled="#{ ! mbBrowse.connected}"
+title="Datensatz aktualisieren"
+style="font-size: 130%;"
+actionListener="#{mbBrowse.update}"/> &#160;&#160;
+
+<h:commandButton value="Delete" disabled="#{ ! mbBrowse.connected}"
+title="Datensatz löschen"
+style="font-size: 130%;"
+actionListener="#{mbBrowse.delete}"/> &#160;&#160;
+
+<h:commandButton value="Connect" disabled="#{mbBrowse.connected}"
+actionListener="#{mbBrowse.connect}"
+style="font-size: 130%;"/> &#160;&#160;
+
+<h:commandButton value="Pizza hinzufügen" disabled="#{ ! mbBrowse.connected}"
+title="Bestellung einfügen"
+style="font-size: 130%;"
+actionListener="#{mbBrowse.bestellen}"/> &#160;&#160;
+
+<h:commandButton value="Disconnect" disabled="#{ ! mbBrowse.connected}"
+actionListener="#{mbBrowse.disconnect}"
+style="font-size: 130%;"/>
+
+
+
+ </h:panelGroup>
+
+<!-- ================================================================== -->
+      
     </div>
+    
+    
     <div class="col-md-6">
-    
-    
     <table id="produkt-tab" border="1">
 						
 							<tr>
