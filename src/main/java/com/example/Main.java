@@ -53,8 +53,8 @@ public class Main {
 		return "index";
 	}
 	
-	@RequestMapping("?")
-	String test() {
+	@RequestMapping("/test")
+	String testtest() {
 		return "test";
 	}
 
